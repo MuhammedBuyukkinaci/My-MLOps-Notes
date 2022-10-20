@@ -41,7 +41,7 @@ This repository is containing my notes from [this Udemy course](https://www.udem
 
 10) MLOps Tools
 
-![tools](./images/010.png)
+![tools](./images/007.png)
 
 11) Some data labelling tools:
 
@@ -66,6 +66,28 @@ This repository is containing my notes from [this Udemy course](https://www.udem
 14) Fast API can be used in serving ML model.
 
 15) Streamlit is useful for POC.
+
+16) MLOps stages:
+
+![ml_ops_stages](./images/008.png)
+
+17) Some tools to use
+
+![ml_ops_stages](./images/009.png)
+
+18) Structuring ML projects in one of 3 ways.
+
+![structuring](./images/010.png)
+
+19) Cookiecutter is a tool to structure our ML projects and folders.
+
+```runall.sh
+pip install cookiecutter
+
+cookiecutter https://github.com/khuyentran1401/data-science-template
+```
+
+![cookiecutter](./images/011.png)
 
 
 
