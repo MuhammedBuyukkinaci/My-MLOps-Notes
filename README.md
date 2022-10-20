@@ -79,6 +79,8 @@ This repository is containing my notes from [this Udemy course](https://www.udem
 
 ![structuring](./images/010.png)
 
+## Cookiecutter
+
 19) Cookiecutter is a tool to structure our ML projects and folders.
 
 ```runall.sh
@@ -88,6 +90,76 @@ cookiecutter https://github.com/khuyentran1401/data-science-template
 ```
 
 ![cookiecutter](./images/011.png)
+
+## Poetry 
+
+20) [Poetry](https://python-poetry.org/) allows us to manage dependencies and versions. Poetry is an alternative to pip.
+
+    - Poetry separates main dependencies and sub dependencies into two separate files. Whereas,pip stores all dependencies in a single file(requirements.txt).
+    - Poetry creates readable dependency files.
+    - Poetry removes all sub dependencies when removing a library
+    - Poetry avoids installing new libraries in conflict with existing libraries.
+    - Poetry packages project with few lines of code.
+    - All the dependencies of he project are specified in pyproject.toml
+
+```poetry.sh
+# TO install poetry on your machine(for linux and mac)
+curl -sSL https://install.python-poetry.org | python3 -
+
+
+# To generate a project
+poetry new <project_name>
+
+# To install dependencies
+poetry install
+
+# To add a new pypi library
+poetry add <library_name>
+
+# To delete a library
+poetry remove <library_name>
+
+# To show installed libraries
+poetry show
+
+# To show sub dependencies
+poetry show --tree
+
+# Link our existing environment(venv, conda etc) to poetry
+poetry env use /path/to/python
+```
+
+21) [Hydra](https://hydra.cc/docs/intro/) manages configuration files. It makes project management easier.
+
+    - Configuration information shouldn't be mixed with main code.
+    - It is easier to modify things in a configuration file.
+    - YAML is a common language for a configuration file.
+    - An example config file and its usage via hydra
+    - We can modify hydra parameters via CLI without modifying config file.
+
+    ![Hydra](./images/014.png)
+
+    ![Hydra](./images/015.png)
+
+    - Hydro logging is super useful.
+
+![Hydra](./images/013.png)
+
+22) Pre-commit plugins: It automates code review and formatting.
+
+23) [DVC](https://dvc.org/) is used for version control of model training data.
+
+24) [pdoc](https://github.com/mitmproxy/pdoc) is used to automatically create documentation for projects.
+
+25) Makefile creates short and readable commands for configuration tasks. We can use Makefile to automate tasks such as setting up the environment.
+
+![Makefile](./images/012.png)
+
+
+
+
+
+
 
 
 
