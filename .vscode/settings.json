@@ -1,0 +1,31 @@
+{
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "ayu",
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "workbench.settings.editor": "json",
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#3ccd1c",
+		"titleBar.activeForeground": "#dc7a29",
+      },
+    "workbench.settings.openDefaultSettings": true,
+    "workbench.settings.useSplitJSON": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "code-runner.executorMap": {
+        "python": "$pythonPath -u $fullFileName"
+    },
+    "code-runner.showExecutionMessage": false,
+    "code-runner.clearPreviousOutput": true,
+    "python.testing.pytestArgs": [
+        "pytest"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.languageServer": "Pylance",
+
+}

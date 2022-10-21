@@ -91,7 +91,7 @@ cookiecutter https://github.com/khuyentran1401/data-science-template
 
 ![cookiecutter](./images/011.png)
 
-## Poetry 
+## Poetry
 
 20) [Poetry](https://python-poetry.org/) allows us to manage dependencies and versions. Poetry is an alternative to pip.
 
@@ -143,26 +143,71 @@ poetry env use /path/to/python
 
     - Hydro logging is super useful.
 
+    - To use hydra, we must add config as an argument to a function.
+
+```
+import hydra
+from pipeline2 import pipeline2
+
+@hydra.main(config_name = 'preprocessing')
+def run_training(config):
+
+    match_pipe = pipeline2(config)
+
+
+```
+
 ![Hydra](./images/013.png)
 
-22) Pre-commit plugins: It automates code review and formatting.
+![Hydra](./images/017.png)
 
-23) [DVC](https://dvc.org/) is used for version control of model training data.
+22) [Pre-commit](https://pre-commit.com/) plugins: It automates code review and formatting. In order to install them, use `pip install pre-commit`. After installing `pre-commit`, fill out `.pre-commit-config.yaml` and run `pre-commit install` to install it. Then, some checks are run before committing to local repository. Commit will not be done until the problem got solved. `--no-verify` is flag that can be appended to git commit. It doesn'T force you to correct the mistakes detected by pre-commit.
 
-24) [pdoc](https://github.com/mitmproxy/pdoc) is used to automatically create documentation for projects.
+![precommit](./images/018.png)
 
-25) Makefile creates short and readable commands for configuration tasks. We can use Makefile to automate tasks such as setting up the environment.
+    - Formatter: black
+    - PEP8 Checker: flake8
+    - Sort imports: isort
+    - Check for docstrings: interrogate
+
+![precommit](./images/019.png)
+
+23) Black and Flake8
+
+```run.sh
+# pip install black
+black file_name_01.py
+
+# pip install flake8
+flake8 temp.py
+```
+
+24) isort and iterrogate
+
+    - correct isort:
+    ![isort](./images/020.png)
+
+```isort_usage.py
+#pip install isort
+isort file_name.py
+#pip install interrogate
+interrogate -vv file_name.py
+
+```
+
+25) [DVC](https://dvc.org/) is used for version control of model training data.
+
+26) [pdoc](https://github.com/mitmproxy/pdoc) is used to automatically create documentation for projects.
+
+```install.sh
+pip install pdoc3
+
+pdoc --http localhost:8080 temp.py
+
+```
+
+27) Makefile creates short and readable commands for configuration tasks. We can use Makefile to automate tasks such as setting up the environment.
 
 ![Makefile](./images/012.png)
-
-
-
-
-
-
-
-
-
-
 
 
