@@ -210,4 +210,40 @@ pdoc --http localhost:8080 temp.py
 
 ![Makefile](./images/012.png)
 
+28) A solution design is available at [here](https://github.com/ttzt/catalog_of_requirements_for_ai_products)
+
+29) MLOps stages:
+
+![mlops_stages](./images/021.png)
+
+30) What AutoML does:
+
+![mlops_stages](./images/022.png)
+
+31) PyCaret is an open source, low code ML library. It has been developed in Python and reduce the time needed to create a model to minutes.
+
+![pycaret](./images/023.png)
+
+32) [PyCaret](https://pycaret.org/) incorporates these libraries:
+
+![pycaret](./images/024.png)
+
+33) [Pandas Profiling](https://github.com/ydataai/pandas-profiling) is allowing us to develop an exhaustive analysis of data.
+
+![pandas_profiling](./images/025.png)
+
+34) An example of PyCaret setup function:
+
+![pycaret](./images/026.png)
+
+35) Tukey-Anscomble Plot && Normal QQ Plot
+
+![plot1](./images/027.png)
+
+36) Scale-Location Plot && Residuals & Leverage
+
+![plot2](./images/028.png)
+
+
+
 
