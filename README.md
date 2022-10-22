@@ -244,6 +244,65 @@ pdoc --http localhost:8080 temp.py
 
 ![plot2](./images/028.png)
 
+37) MLOps Tracking Server and Model Registry
+
+![plot2](./images/029.png)
+
+38) MLFlow UI for different runs
+
+![plot2](./images/030.png)
+
+39) Different Components of MLFlow
+
+40) We can log parameters, metrics and models in MLFlow.
+
+```mlflow_demo.py
+
+import mlflow
+from sklearn.linear_model import LogisticRegression
+from urllib.parse import urlparse
+
+alpha = 0.5
+
+def rmse_compute(true,preds):
+    pass
+
+X_train = None
+y_train = None
+
+X_test = None
+y_test = None
+
+with mlflow.start_run():
+
+    lr = LogisticRegression(alpha = alpha)
+    lr.fit(X_train,y_train)
+    y_test_preds = lr.predict(X_test)
+    rmse = rmse_compute(y_test,y_test_preds)
+    mlflow.log_param('alpha',alpha)
+    mlflow.log_metric('rmse',rmse)
+
+    tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
+
+    if tracking_url_type_store != 'file':
+        mlflow.sklearn.log_model(lr,'model',registered_monel_name = 'ElasticNetWineModel')
+    else:
+        mlflow.sklearn.log_model(lr,'model')
+
+
+```
+
+41) We can register models into MLFlow via PyCaret.
+
+```
+#pass log_experiment = True, experiment_name = 'diamond'
+
+s = setup(data, target = 'Precio', transform_target = True, log_experiment = True, experiment_name = 'diamond')
+
+```
+
+
+
 
 
 
