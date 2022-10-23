@@ -400,8 +400,15 @@ def home(id: int):
 
 54) PyCaret is able to create automated FastAPI.
 
+## Gradio
 
+55) [Gradio](https://gradio.app/) is a web application to deploy our ML models. It has a UI for business users.
 
+56) An example demo for gradio app
+
+![](./images/040.png)
+
+57) PyCaret has a function to create gradio apps easily.
 
 
 
