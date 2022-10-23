@@ -410,6 +410,46 @@ def home(id: int):
 
 57) PyCaret has a function to create gradio apps easily.
 
+## Flask
 
+58) Flask is a web development framework in Python.
+
+    - It is easy to use.
+    - It is flexible.
+    - Allows testing.
+
+59) An example code snippet for Flask
+
+```
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return {"Hello": "World"}
+
+if __name__ == '__main__':
+    app.run()
+
+```
+
+60) A ML Project Deployment Pipeline
+
+![](./images/041.png)
+
+61) Dockerfile can be thought as recipy to cook a meal.
+
+62) Phyical Machine vs Virtualization vs Container Deployment vs Kubernetes
+
+![](./images/042.png)
+
+63) We can create a docker image using PyCaret vida `create_docker` function of PyCaret.
+
+## Azure
+
+64) If we are using a paid Azure account, we can register our Docker images on Azure Registry.
+
+65) Azure Blob Storage is similar to Amazon S3. To use asure blob storage, azure SDK is needed.
 
 
