@@ -49,6 +49,8 @@ This repository is containing my notes from [this Udemy course](https://www.udem
 
 - [labelbox](https://labelbox.com/pricing/)
 
+## Feature Engineering
+
 12) Some Feature Engineering Tools:
 
 - [feast](https://github.com/feast-dev/feast)
@@ -56,6 +58,8 @@ This repository is containing my notes from [this Udemy course](https://www.udem
 - [featuretools](https://github.com/alteryx/featuretools)
 
 - [tsfresh](https://github.com/blue-yonder/tsfresh)
+
+## Hyperparameter Optimization
 
 13) Some Hyperparameter Optimization Tools:
 
@@ -129,6 +133,8 @@ poetry show --tree
 poetry env use /path/to/python
 ```
 
+## Hydra
+
 21) [Hydra](https://hydra.cc/docs/intro/) manages configuration files. It makes project management easier.
 
     - Configuration information shouldn't be mixed with main code.
@@ -160,6 +166,8 @@ def run_training(config):
 ![Hydra](./images/013.png)
 
 ![Hydra](./images/017.png)
+
+## Pre-commit
 
 22) [Pre-commit](https://pre-commit.com/) plugins: It automates code review and formatting. In order to install them, use `pip install pre-commit`. After installing `pre-commit`, fill out `.pre-commit-config.yaml` and run `pre-commit install` to install it. Then, some checks are run before committing to local repository. Commit will not be done until the problem got solved. `--no-verify` is flag that can be appended to git commit. It doesn'T force you to correct the mistakes detected by pre-commit.
 
@@ -220,6 +228,8 @@ pdoc --http localhost:8080 temp.py
 
 ![mlops_stages](./images/022.png)
 
+## PyCaret
+
 31) PyCaret is an open source, low code ML library. It has been developed in Python and reduce the time needed to create a model to minutes.
 
 ![pycaret](./images/023.png)
@@ -252,9 +262,13 @@ pdoc --http localhost:8080 temp.py
 
 ![plot2](./images/030.png)
 
+## MLFlow
+
 39) Different Components of MLFlow
 
-40) We can log parameters, metrics and models in MLFlow.
+![](./images/031.png)
+
+40) We can log parameters, metrics and models in [MLFlow](https://mlflow.org/).
 
 ```mlflow_demo.py
 
@@ -300,6 +314,92 @@ with mlflow.start_run():
 s = setup(data, target = 'Precio', transform_target = True, log_experiment = True, experiment_name = 'diamond')
 
 ```
+
+## Shap
+
+42) [Shap](https://shap.readthedocs.io/en/latest/index.html) is a Python library about model interpretability.
+
+![](./images/032.png)
+
+43) A prediction for a single record
+
+![](./images/033.png)
+
+44) We can use SHAP with PyCaret.
+
+## Deploying the model
+
+45) We aren't just deploying a model(a pickle file). We are also deploying a pipeline(composed of preprocessing, feature engineering etc.)
+
+![](./images/034.png)
+
+46) There are 2 different ways to deploy a model in a production environment
+
+    - Through API
+    - Through Applications(mobile/web)
+
+## FastAPI
+
+![](./images/035.png)
+
+47) API is an intermediary between 2 different applications that communicate each other. If we want our applications to be available for other developers, creating an api as an intermediate connector is convenient. Developers send http request to consume this service. We can think of an API as an bstraction of our application. Thanks to API, users don't need code or install the dependencies.
+
+![](./images/036.png)
+
+48) HTTP verbs and Status Codes
+
+![](./images/037.png)
+
+49) FastAPI is the framework creating robust & high-performance API for production environments. Compared to Flask, which is a development framework, FastAPI has the following advantages:
+
+    - Using syncio
+    - Implementing PyDantic for data validation
+    - FastAPI forces the schema application and input data and detect data types at runtime.
+    - FastAPI uses swagger UI to create automatic documentation.
+    - FastAPI has a better security and authentication features.
+
+50) FastAPI documentation UI
+
+![](./images/038.png)
+
+51) FastAPI is built on top of uvicorn library.
+
+52) A basic usage of FastAPI
+
+```
+import uvicorn
+from fastapi import FastAPI
+
+app = FastAPI()
+@app.get('/')
+def home():
+    return {'Hello': 'World'}
+
+#@app.post("/")
+#def home_post():
+#    return {"Hello": "POST"}
+
+if __name__ == '__main__':
+    uvicorn.run("hellow_world_fastapi:app")
+
+#query parameters
+@app.get("/employee")
+def home(department: str):
+    return {"department": department}
+
+#path parameters
+@app.get("/employee/{id}")
+def home(id: int):
+    return {"id": id}
+
+```
+
+53) Pydantic usage in FastAPI
+
+![](./images/039.png)
+
+54) PyCaret is able to create automated FastAPI.
+
 
 
 
