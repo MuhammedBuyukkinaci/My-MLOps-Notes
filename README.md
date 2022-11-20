@@ -85,7 +85,7 @@ This repository is containing my notes from [this Udemy course](https://www.udem
 
 ## Cookiecutter
 
-19) Cookiecutter is a tool to structure our ML projects and folders.
+19) Cookiecutter is a tool to structure our ML projects and folders. It should be installed GLOBALLY on the computer(not in a virtual environment).
 
 ```runall.sh
 pip install cookiecutter
@@ -94,6 +94,10 @@ cookiecutter https://github.com/khuyentran1401/data-science-template
 ```
 
 ![cookiecutter](./images/011.png)
+
+```
+cookiecutter https://github.com/MuhammedBuyukkinaci/Clean-Data-Science-Project-Template.git
+```
 
 ## Poetry
 
