@@ -456,4 +456,38 @@ if __name__ == '__main__':
 
 65) Azure Blob Storage is similar to Amazon S3. To use asure blob storage, azure SDK is needed.
 
+# Practical MLOPS Notes
+
+## Intrıduction to MLOPS
+
+1) ML job listings are much more than data science job listings.
+
+2) MLOps is the process of automating machine learning using DevOps methodologies.
+
+3) Data drift is a phonomenia that means data changed from training to inference.
+
+4) New Relic, Data Dog and Stackdriver are performance monitoring tools.
+
+5) An example Makefile is below. Run `make install` or `make lint` or `make test`.
+
+```Makefile
+install:
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
+lint:
+	pylint --disable=R,C hello.py
+
+test:
+	python -m pytest -vv --cov=hello test_hello.py
+```
+
+6) Data Lake is a place where we can process data without transferring it outside.
+
+7) MLOPS is possible after Devops(Jenkins), Data automation(Airflow) and platform automation(AWS Sagemaker) are completed.
+
+8) Building reusable ML pipelines is crucial and related to versioning.
+
+9) [Locust](https://locust.io/) and [loader.io](https://loader.io/) are 2 ways for load testing.
+
+10) MLOPS is a combination of Data, Devops, Models and Business equally.
 
