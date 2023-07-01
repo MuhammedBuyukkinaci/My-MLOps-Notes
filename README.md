@@ -491,3 +491,14 @@ test:
 
 10) MLOPS is a combination of Data, Devops, Models and Business equally.
 
+## MLOPS Foundations
+
+## MLOPS for containers and Edge Devices
+
+1) The future means more ML at the edge devices.
+
+2) [The Coral Project](https://coral.ai/) is a platform that helps build local (on-device) inferencing that captures the essence of edge deployments: fast, close to the user, and offline.
+
+3) Azure Percept is a Microsoft solution similar to The Coral Project.
+
+
