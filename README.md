@@ -501,4 +501,20 @@ test:
 
 3) Azure Percept is a Microsoft solution similar to The Coral Project.
 
+## Continuous Delivery for Machine Learning Models
+
+1) Github actions can be located under .github/workflows/ as main.yaml. 
+
+2) An examle overview of CI/CD
+
+![](./images/043.png)
+
+3) Kubernetes is a good way to implement Blue-Green Deployment.
+
+4) Blue green deployment is a way for deployments. There are 2 environments. The current is blue and the new version is green. The app is running on blue environment. We are installing the new version on green environment and carrying out tests. If everything goes well, direct the traffic to green environment.
+
+5) Canary deployment is a way for deployments. We are progressively moving traffic from old environment to new environment. If something unexpected happens in the new environment, we are rolling back to the previous environment. Thus, less traffic got affected due to mistakes. If everything goes well, the traffic directed to the new environment is progressively increased up to 100%.
+
+
+
 
