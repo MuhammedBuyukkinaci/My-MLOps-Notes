@@ -515,6 +515,36 @@ test:
 
 5) Canary deployment is a way for deployments. We are progressively moving traffic from old environment to new environment. If something unexpected happens in the new environment, we are rolling back to the previous environment. Thus, less traffic got affected due to mistakes. If everything goes well, the traffic directed to the new environment is progressively increased up to 100%.
 
+## AutoML and KaizenML
 
+1 ) KaizenML is about automating everything about the machine learning process and improving it.
+
+2) Software for training machine learning models could turn into something like the Linux kernel, free and ubiquitous.
+
+3) AutoML is just a technique, like continuous integration (CI); it automates trivial tasks.
+
+4) DevOps + KaizenML = MLOps. KaizenML includes building Feature Stores, i.e., a registry of high-quality machine learning inputs and the ability to monitor data for drift and register and serve out ML models
+
+5) Uber's [Michelangelo](https://www.uber.com/en-TR/blog/michelangelo-machine-learning-platform/) is a ML as a Service. [Databricks](https://www.databricks.com/product/feature-store) has a feature store solution too.
+
+6) Apple has a machine learning framework called Core ML. It is under Xcode > Open Developer Tool > Create ML.
+
+7) [TFHUB](https://tfhub.dev/) is a hub to store various pretrained ML models.
+
+8) SageMaker Autopilot is AWS's complete solution for AutoML and MLOps.
+
+9) [Ludwig] is a Python library that builds up ML solutions declaratively. We are defining a yaml file and then running ludwig's API via programatically or CLI. It is a part of Linux foundation.
+
+![](./images/044.png)
+
+10) [FlaML](https://github.com/microsoft/FLAML) is an AutoML solution. It has a design that accounts for cost-effective hyperparameter optimization.
+
+11) [Tpot](https://github.com/EpistasisLab/tpot) is an AutoML solution. TPOT is a Python Automated Machine Learning tool that optimizes machine learning pipelines using genetic programming.
+
+12) [PyCaret](https://github.com/pycaret/pycaret) is an AutoML tool.
+
+13) [Autosklearn](https://github.com/automl/auto-sklearn) is an AutoML tool.
+
+14) [H2O AutoML](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/index.html) is an AutoML tool.
 
 
