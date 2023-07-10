@@ -547,4 +547,23 @@ test:
 
 14) [H2O AutoML](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/index.html) is an AutoML tool.
 
+15) ELI5 and SHAP are 2 popular open source Model Explainability frameworks.
+
+## AWS for MLOPS
+
+1) [Go Hugo](https://github.com/gohugoio/hugo) is a website to build up static websites.
+
+2) AWS DeepLens is a hardware sol
+
+3) It would bea good practice to have a cli.py to get predictions.
+
+4) Github actions is an alternative to bitbucket pipelines and jenkins. Its cloud native alternative on AWS is AWS Codebuild.
+
+5) Github container registry is an alternative to Amazon ECR(Elastic COntainer Registry).
+
+
+
+
+
+
 
