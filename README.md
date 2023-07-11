@@ -561,6 +561,46 @@ test:
 
 5) Github container registry is an alternative to Amazon ECR(Elastic COntainer Registry).
 
+## Machine Learning Interoperability
+
+1) ONNX is a tool for ML Interoperability. It is a product of collaboration of Facebook and Microsoft.
+
+2) Some libraries are able to being converted to ONNX format:
+
+![](./images/045.png)
+
+3) An example script to convert a pytorch model to ONNX format
+
+```python
+import torch
+import torchvision
+
+dummy_tensor = torch.randn(8, 3, 200, 200)
+model = torchvision.models.resnet18(pretrained=True)
+
+input_names = [ "input_%d" % i for i in range(12) ]
+output_names = [ "output_1" ]
+
+torch.onnx.export(
+    model,
+    dummy_tensor,
+    "resnet18.onnx",
+    input_names=input_names,
+    output_names=output_names,
+    opset_version=7,
+    verbose=True,
+)
+```
+
+4) ONNX has a special format callet ORT for minimized build size of the model.
+
+## Building MLOps Command Line Tools and Microservices
+
+1) requirements.txt file and setup.py files are able to install dependencies for a Python project. However, only setup.py file can package a project for distribution.
+
+
+
+
 
 
 
