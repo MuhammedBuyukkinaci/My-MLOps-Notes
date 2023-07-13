@@ -598,6 +598,8 @@ torch.onnx.export(
 
 1) requirements.txt file and setup.py files are able to install dependencies for a Python project. However, only setup.py file can package a project for distribution.
 
+2) Command Line Tool Development can be useful in a situation that needs solving.
+
 
 
 
