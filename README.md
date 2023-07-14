@@ -600,9 +600,13 @@ torch.onnx.export(
 
 2) Command Line Tool Development can be useful in a situation that needs solving.
 
+## ML Engineering and ML Use cases
 
+1) Porting a Python model into a production language like C++ or Java is challenging, and often results in reduced performance of the original, trained model
 
+2) [Fairlearn](https://github.com/fairlearn/fairlearn) is a python package to mitigate observed unfairness. It is a library to detect bias among gender, race, religion etc.
 
+3) [InterpretML](https://github.com/interpretml/interpret) is a python package for ML interpretability.
 
 
 
